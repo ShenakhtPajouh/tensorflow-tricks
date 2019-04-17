@@ -11,4 +11,4 @@ we implement both partial and full version of implementing training part in tens
 
 This will also give an insight to what will be going on in Tensorflow 2. 
 
-  
+__note__: for simplicity these model is a classifier for MNIST dataset. so first preprare dataset on ```../data/minist``` directory.
