@@ -84,7 +84,7 @@ def full_train(model, epochs, train_iterator, validation_iterator, train_steps, 
     return train
 
 
-data = np.load("../data/mnist/mnist.npy")
+data = np.load("../data/mnist/mnist.npz")
 batch_size = 256
 train_data = tf.data.Dataset.from_tensor_slices((data["train_images"], data["train_labels"]))
 validation_data = tf.data.Dataset.from_tensor_slices((data["test_images"], data["test_labels"]))

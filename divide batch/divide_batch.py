@@ -57,7 +57,7 @@ def divide_batch_train(inputs, labels, division_number, model, training, optimiz
         returns.append(train)
     return returns
 
-data = np.load("../data/mnist/mnist.npy")
+data = np.load("../data/mnist/mnist.npz")
 batch_size = 256 * 8
 train_data = tf.data.Dataset.from_tensor_slices((data["train_images"], data["train_labels"]))
 validation_data = tf.data.Dataset.from_tensor_slices((data["test_images"], data["test_labels"]))

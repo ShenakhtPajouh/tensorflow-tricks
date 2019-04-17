@@ -50,7 +50,7 @@ def train_some_steps(model, iterator, num_steps, training, optimizer=None):
     _, total_loss, total_accuracy, _ = tf.while_loop(_cond, _body, [step, total_loss, total_accuracy, total_size])
     return total_loss, total_accuracy
 
-data = np.load("../data/mnist/mnist.npy")
+data = np.load("../data/mnist/mnist.npz")
 batch_size = 256
 train_data = tf.data.Dataset.from_tensor_slices((data["train_images"], data["train_labels"]))
 validation_data = tf.data.Dataset.from_tensor_slices((data["test_images"], data["test_labels"]))

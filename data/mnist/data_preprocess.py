@@ -12,6 +12,6 @@ def get_dataset(path):
 if __name__ == "__main__":
     train_images, train_labels = get_dataset("mnist_train.csv")
     test_images, test_labels = get_dataset("mnist_test.csv")
-    np.savez('mnist.npy', test_images=test_images, test_labels=test_labels, train_images=train_images,
+    np.savez('mnist.npz', test_images=test_images, test_labels=test_labels, train_images=train_images,
              train_labels=train_labels)
 
